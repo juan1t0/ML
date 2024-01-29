@@ -1,4 +1,5 @@
 %855899
+clean;
 n = 200;
 d = 5;
 x = rand(n,1);
@@ -17,6 +18,7 @@ ys = sin(2*pi*xs);
 X_t = convert_x(x_train,d);
 
 w = X_t\Y_train;
+
 fprintf('w:[%g', w);
 fprintf(']\n');
 Xs= convert_x(xs,d);
@@ -31,4 +33,8 @@ xlim([-0.2 1.2]);
 ylim([-1.4 1.4]);
 grid on;
 legend('sin(2*\pi x)','Dataset(train)','Dataset(test)','SimpleModel');
+xlabel("x");
+ylabel("y");
+title("Polinomyal Fitting");
 hold off;
+
