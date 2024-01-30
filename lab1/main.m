@@ -1,5 +1,5 @@
 %855899
-clean;
+clear;
 n = 200;
 d = 5;
 x = rand(n,1);
