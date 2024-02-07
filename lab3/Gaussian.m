@@ -1,10 +1,7 @@
-function prob = Gaussian(points,mean,var)
-  
-end
 
 %855899
 
-function results = multiDGaussian(points, meanV, covM)
+function prob = Gaussian(points, meanV, covM)
     d = length(meanV); % capturing the data dimension
     covM = squeeze(covM); % convert 1x2x2 array to 2x2 matrix
     detCov = det(covM);
@@ -15,5 +12,5 @@ function results = multiDGaussian(points, meanV, covM)
 
     norma = 1 / ((2 * pi)^(d / 2) * sqrt(detCov)); % normalization factor
 
-    results = norma * exp(exponent);
+    prob = norma * exp(exponent);
 end
